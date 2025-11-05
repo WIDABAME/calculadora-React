@@ -48,7 +48,6 @@ function Calculator() {
 
   return (
     <div style={styles.container}>
-      <h2>Calculadora React</h2>
 
       <input
         type="number"
@@ -94,24 +93,49 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    gap: "10px",
-    marginTop: "30px",
+    gap: "18px",
+    marginTop: "50px",
+    padding: "28px",
+    backgroundColor: "#f3f4f6", 
+    borderRadius: "14px",
+    boxShadow: "0 4px 14px rgba(0, 0, 0, 0.06)",
+    width: "360px",
+    marginInline: "auto",
   },
   input: {
-    width: "200px",
-    padding: "5px",
+    width: "100%",
+    padding: "12px 14px",
+    border: "1px solid #cbd5e1",
+    borderRadius: "10px",
+    backgroundColor: "#ffffff",
+    fontSize: "15px",
+    color: "#111827",
+    outline: "none",
+    transition: "border-color 0.2s, box-shadow 0.2s",
   },
   select: {
-    width: "210px",
-    padding: "5px",
+    width: "100%",
+    padding: "12px 14px",
+    border: "1px solid #cbd5e1",
+    borderRadius: "10px",
+    backgroundColor: "#ffffff",
+    fontSize: "15px",
+    color: "#111827",
+    outline: "none",
+    transition: "border-color 0.2s, box-shadow 0.2s",
   },
   button: {
-    padding: "8px 12px",
-    backgroundColor: "#007bff",
-    color: "#fff",
+    width: "100%",
+    padding: "12px 14px",
+    backgroundColor: "#10b981", 
+    color: "#ffffff",
+    fontSize: "15px",
+    fontWeight: "600",
     border: "none",
-    borderRadius: "4px",
+    borderRadius: "10px",
     cursor: "pointer",
+    transition: "background-color 0.2s, transform 0.1s, box-shadow 0.2s",
+    boxShadow: "0 2px 8px rgba(16, 185, 129, 0.3)",
   },
 };
 
