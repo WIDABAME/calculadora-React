@@ -20,8 +20,11 @@ FROM nginx:stable-alpine
 # Copiar los archivos estáticos generados
 COPY --from=build /app/dist /usr/share/nginx/html
 
-# Exponer el puerto 80
-EXPOSE 80
+# Cambiar configuración de NGINX para usar el puerto asignado por Render
+RUN sed -i 's/listen 80;/listen ${PORT};/' /etc/nginx/conf.d/default.conf
+
+# Exponer el puerto dinámico
+EXPOSE 10000
 
 # Comando por defecto
 CMD ["nginx", "-g", "daemon off;"]
